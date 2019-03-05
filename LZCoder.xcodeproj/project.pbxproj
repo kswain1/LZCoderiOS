@@ -14,6 +14,7 @@
 		88568462222DF9EB00669E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88568460222DF9EB00669E5A /* LaunchScreen.storyboard */; };
 		8856846D222DF9EB00669E5A /* LZCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8856846C222DF9EB00669E5A /* LZCoderTests.swift */; };
 		88568478222DF9EB00669E5A /* LZCoderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88568477222DF9EB00669E5A /* LZCoderUITests.swift */; };
+		B848D7FB222E278D00F71BB2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848D7FA222E278D00F71BB2 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		88568473222DF9EB00669E5A /* LZCoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZCoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88568477222DF9EB00669E5A /* LZCoderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LZCoderUITests.swift; sourceTree = "<group>"; };
 		88568479222DF9EB00669E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B848D7FA222E278D00F71BB2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				88568457222DF9EA00669E5A /* AppDelegate.swift */,
 				88568459222DF9EA00669E5A /* ViewController.swift */,
+				B848D7FA222E278D00F71BB2 /* SearchViewController.swift */,
 				8856845B222DF9EA00669E5A /* Main.storyboard */,
 				8856845E222DF9EB00669E5A /* Assets.xcassets */,
 				88568460222DF9EB00669E5A /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B848D7FB222E278D00F71BB2 /* SearchViewController.swift in Sources */,
 				8856845A222DF9EA00669E5A /* ViewController.swift in Sources */,
 				88568458222DF9EA00669E5A /* AppDelegate.swift in Sources */,
 			);
@@ -433,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77PZNJDUQL;
+				DEVELOPMENT_TEAM = XZDGN7QEVF;
 				INFOPLIST_FILE = LZCoder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77PZNJDUQL;
+				DEVELOPMENT_TEAM = XZDGN7QEVF;
 				INFOPLIST_FILE = LZCoder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
