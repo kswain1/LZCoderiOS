@@ -9,5 +9,7 @@
 import UIKit
 
 class DetailViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var progressView: UIView!
+    @IBOutlet weak var lblAmount: UILabel!
+    @IBOutlet weak var lblDesc: UILabel!
 }
