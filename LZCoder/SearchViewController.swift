@@ -153,4 +153,10 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    //MARK: UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segueCPTDetails", sender: nil)
+    }
+    
 }
