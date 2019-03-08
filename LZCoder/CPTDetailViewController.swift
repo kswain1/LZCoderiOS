@@ -28,8 +28,14 @@ class CPTDetailViewController: UIViewController {
     @IBAction func btnBackClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func btnCheckClicked(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    
     /*
-    // MARK: - Navigation
+     
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

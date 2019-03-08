@@ -103,7 +103,9 @@ class SearchViewController: UIViewController {
         
     }
     
-
+    @objc func btnCheckBoxClicked(sender: UIButton){
+        sender.isSelected = !sender.isSelected
+    }
 }
 
 extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
@@ -141,6 +143,10 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
             cell?.lblAmount.text = "\(amount ?? 0)"
             cell?.lblDesc.text = self.codesCPTArray?[indexPath.row]["detialText"] as? String
             cell?.btnCheckBox.isSelected = self.codesCPTArray?[indexPath.row]["isSelected"] as? Bool ?? false
+//            cell?.btnCheckBox.addTarget(self, action: Selecto, for: .touchUpInside)
+            cell?.btnCheckBox.addTarget(self, action: #selector(SearchViewController.btnCheckBoxClicked(sender:)), for: .touchUpInside)
+            cell?.btnCheckBox.tag = indexPath.row
+            cell?.selectionStyle = .none
 //            configureCell(cell: cell, forRowAt: indexPath)
             return cell!
         case .ICD:
@@ -149,11 +155,16 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
             cell?.lblAmount.text = "$\(amount ?? 0)"
             cell?.lblDesc.text = self.codesICDArray?[indexPath.row]["detialText"] as? String
             cell?.btnCheckBox.isSelected = self.codesICDArray?[indexPath.row]["isSelected"] as? Bool ?? false
+            cell?.btnCheckBox.addTarget(self, action: #selector(SearchViewController.btnCheckBoxClicked(sender:)), for: .touchUpInside)
+            cell?.btnCheckBox.tag = indexPath.row
+            cell?.selectionStyle = .none
 //            configureCell(cell: cell, forRowAt: indexPath)
             return cell!
         }
         
     }
+    
+    
     
     func configureCell(cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
