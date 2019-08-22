@@ -1,0 +1,6 @@
+framework module Pods_LZCoder {
+  umbrella header "Pods-LZCoder-umbrella.h"
+
+  export *
+  module * { export * }
+}

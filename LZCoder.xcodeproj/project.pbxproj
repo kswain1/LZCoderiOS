@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1E1587D9222FD3D80054E751 /* CPTDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1587D8222FD3D80054E751 /* CPTDetailViewController.swift */; };
 		1E1587DB222FDEA20054E751 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1587DA222FDEA20054E751 /* DetailViewCell.swift */; };
+		4117736C7892FB205CDF478A /* Pods_LZCoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217ED90E5FB4B4CF617E7E9B /* Pods_LZCoder.framework */; };
+		5214270D9DD29782910E2AA8 /* Pods_LZCoderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382BADB22318CC68E635828E /* Pods_LZCoderUITests.framework */; };
+		6DBF7E1C0A155EE320C2BF0B /* Pods_LZCoderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454E2D053E11C10E8613692A /* Pods_LZCoderTests.framework */; };
 		88568458222DF9EA00669E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88568457222DF9EA00669E5A /* AppDelegate.swift */; };
 		8856845A222DF9EA00669E5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88568459222DF9EA00669E5A /* ViewController.swift */; };
 		8856845D222DF9EA00669E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8856845B222DF9EA00669E5A /* Main.storyboard */; };
@@ -16,6 +19,10 @@
 		88568462222DF9EB00669E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88568460222DF9EB00669E5A /* LaunchScreen.storyboard */; };
 		8856846D222DF9EB00669E5A /* LZCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8856846C222DF9EB00669E5A /* LZCoderTests.swift */; };
 		88568478222DF9EB00669E5A /* LZCoderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88568477222DF9EB00669E5A /* LZCoderUITests.swift */; };
+		B800F343230F07A300A53C07 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800F342230F07A300A53C07 /* ProfileViewController.swift */; };
+		B800F34B230F0D6C00A53C07 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800F348230F0D6C00A53C07 /* UIView+Border.swift */; };
+		B800F34C230F0D6C00A53C07 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800F349230F0D6C00A53C07 /* UITextField+fixCaretPosition.swift */; };
+		B800F351230F0DF800A53C07 /* LZFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800F350230F0DF800A53C07 /* LZFloatingLabelTextField.swift */; };
 		B830C4AD222EEE7700871DCC /* CPTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830C4AC222EEE7700871DCC /* CPTTableViewCell.swift */; };
 		B830C4AF222EEE8F00871DCC /* ICDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830C4AE222EEE8F00871DCC /* ICDTableViewCell.swift */; };
 		B848D7FB222E278D00F71BB2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848D7FA222E278D00F71BB2 /* SearchViewController.swift */; };
@@ -41,6 +48,13 @@
 /* Begin PBXFileReference section */
 		1E1587D8222FD3D80054E751 /* CPTDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTDetailViewController.swift; sourceTree = "<group>"; };
 		1E1587DA222FDEA20054E751 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
+		217ED90E5FB4B4CF617E7E9B /* Pods_LZCoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZCoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		363B45602593149EB0968291 /* Pods-LZCoderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCoderTests.debug.xcconfig"; path = "Target Support Files/Pods-LZCoderTests/Pods-LZCoderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		382BADB22318CC68E635828E /* Pods_LZCoderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZCoderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		454E2D053E11C10E8613692A /* Pods_LZCoderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZCoderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D5733BB254DEFF65517A82 /* Pods-LZCoder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCoder.release.xcconfig"; path = "Target Support Files/Pods-LZCoder/Pods-LZCoder.release.xcconfig"; sourceTree = "<group>"; };
+		691DD71A3E9851E33FDC2D52 /* Pods-LZCoder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCoder.debug.xcconfig"; path = "Target Support Files/Pods-LZCoder/Pods-LZCoder.debug.xcconfig"; sourceTree = "<group>"; };
+		74E0D05BC9600E11276F12D0 /* Pods-LZCoderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCoderUITests.release.xcconfig"; path = "Target Support Files/Pods-LZCoderUITests/Pods-LZCoderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		88568454222DF9EA00669E5A /* LZCoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZCoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88568457222DF9EA00669E5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88568459222DF9EA00669E5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,9 +68,15 @@
 		88568473222DF9EB00669E5A /* LZCoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZCoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88568477222DF9EB00669E5A /* LZCoderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LZCoderUITests.swift; sourceTree = "<group>"; };
 		88568479222DF9EB00669E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B800F342230F07A300A53C07 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B800F348230F0D6C00A53C07 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
+		B800F349230F0D6C00A53C07 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		B800F350230F0DF800A53C07 /* LZFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		B830C4AC222EEE7700871DCC /* CPTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTTableViewCell.swift; sourceTree = "<group>"; };
 		B830C4AE222EEE8F00871DCC /* ICDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICDTableViewCell.swift; sourceTree = "<group>"; };
 		B848D7FA222E278D00F71BB2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E616C0A5EBD65651EBCDD88D /* Pods-LZCoderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCoderTests.release.xcconfig"; path = "Target Support Files/Pods-LZCoderTests/Pods-LZCoderTests.release.xcconfig"; sourceTree = "<group>"; };
+		E688EEAD289727A7D165114B /* Pods-LZCoderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCoderUITests.debug.xcconfig"; path = "Target Support Files/Pods-LZCoderUITests/Pods-LZCoderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4117736C7892FB205CDF478A /* Pods_LZCoder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBF7E1C0A155EE320C2BF0B /* Pods_LZCoderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +100,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5214270D9DD29782910E2AA8 /* Pods_LZCoderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C61AD4C73675AB9C21317ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				691DD71A3E9851E33FDC2D52 /* Pods-LZCoder.debug.xcconfig */,
+				48D5733BB254DEFF65517A82 /* Pods-LZCoder.release.xcconfig */,
+				363B45602593149EB0968291 /* Pods-LZCoderTests.debug.xcconfig */,
+				E616C0A5EBD65651EBCDD88D /* Pods-LZCoderTests.release.xcconfig */,
+				E688EEAD289727A7D165114B /* Pods-LZCoderUITests.debug.xcconfig */,
+				74E0D05BC9600E11276F12D0 /* Pods-LZCoderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8856844B222DF9EA00669E5A = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +128,8 @@
 				8856846B222DF9EB00669E5A /* LZCoderTests */,
 				88568476222DF9EB00669E5A /* LZCoderUITests */,
 				88568455222DF9EA00669E5A /* Products */,
+				6C61AD4C73675AB9C21317ED /* Pods */,
+				B9331D5DBA7784E384E0E02E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,9 +146,11 @@
 		88568456222DF9EA00669E5A /* LZCoder */ = {
 			isa = PBXGroup;
 			children = (
+				B800F346230F0D2E00A53C07 /* SubClasses */,
 				88568457222DF9EA00669E5A /* AppDelegate.swift */,
 				88568459222DF9EA00669E5A /* ViewController.swift */,
 				B848D7FA222E278D00F71BB2 /* SearchViewController.swift */,
+				B800F342230F07A300A53C07 /* ProfileViewController.swift */,
 				1E1587D8222FD3D80054E751 /* CPTDetailViewController.swift */,
 				B830C4AC222EEE7700871DCC /* CPTTableViewCell.swift */,
 				1E1587DA222FDEA20054E751 /* DetailViewCell.swift */,
@@ -140,6 +181,34 @@
 			path = LZCoderUITests;
 			sourceTree = "<group>";
 		};
+		B800F346230F0D2E00A53C07 /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B800F347230F0D6100A53C07 /* BorderedTextField */,
+			);
+			path = SubClasses;
+			sourceTree = "<group>";
+		};
+		B800F347230F0D6100A53C07 /* BorderedTextField */ = {
+			isa = PBXGroup;
+			children = (
+				B800F350230F0DF800A53C07 /* LZFloatingLabelTextField.swift */,
+				B800F349230F0D6C00A53C07 /* UITextField+fixCaretPosition.swift */,
+				B800F348230F0D6C00A53C07 /* UIView+Border.swift */,
+			);
+			path = BorderedTextField;
+			sourceTree = "<group>";
+		};
+		B9331D5DBA7784E384E0E02E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				217ED90E5FB4B4CF617E7E9B /* Pods_LZCoder.framework */,
+				454E2D053E11C10E8613692A /* Pods_LZCoderTests.framework */,
+				382BADB22318CC68E635828E /* Pods_LZCoderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8856847C222DF9EB00669E5A /* Build configuration list for PBXNativeTarget "LZCoder" */;
 			buildPhases = (
+				7F28046E455E30CB0786C7A4 /* [CP] Check Pods Manifest.lock */,
 				88568450222DF9EA00669E5A /* Sources */,
 				88568451222DF9EA00669E5A /* Frameworks */,
 				88568452222DF9EA00669E5A /* Resources */,
+				C7EF2FF073B9ED03216D8E46 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8856847F222DF9EB00669E5A /* Build configuration list for PBXNativeTarget "LZCoderTests" */;
 			buildPhases = (
+				38FFAEFC09B2DB716D5B7886 /* [CP] Check Pods Manifest.lock */,
 				88568464222DF9EB00669E5A /* Sources */,
 				88568465222DF9EB00669E5A /* Frameworks */,
 				88568466222DF9EB00669E5A /* Resources */,
@@ -182,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88568482222DF9EB00669E5A /* Build configuration list for PBXNativeTarget "LZCoderUITests" */;
 			buildPhases = (
+				42F8985B6E232153850719C2 /* [CP] Check Pods Manifest.lock */,
 				8856846F222DF9EB00669E5A /* Sources */,
 				88568470222DF9EB00669E5A /* Frameworks */,
 				88568471222DF9EB00669E5A /* Resources */,
@@ -266,17 +339,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38FFAEFC09B2DB716D5B7886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LZCoderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42F8985B6E232153850719C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LZCoderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F28046E455E30CB0786C7A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LZCoder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7EF2FF073B9ED03216D8E46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LZCoder/Pods-LZCoder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LZCoder/Pods-LZCoder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LZCoder/Pods-LZCoder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		88568450222DF9EA00669E5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B800F34C230F0D6C00A53C07 /* UITextField+fixCaretPosition.swift in Sources */,
+				B800F351230F0DF800A53C07 /* LZFloatingLabelTextField.swift in Sources */,
 				B848D7FB222E278D00F71BB2 /* SearchViewController.swift in Sources */,
 				8856845A222DF9EA00669E5A /* ViewController.swift in Sources */,
+				B800F34B230F0D6C00A53C07 /* UIView+Border.swift in Sources */,
 				1E1587DB222FDEA20054E751 /* DetailViewCell.swift in Sources */,
 				88568458222DF9EA00669E5A /* AppDelegate.swift in Sources */,
 				1E1587D9222FD3D80054E751 /* CPTDetailViewController.swift in Sources */,
 				B830C4AD222EEE7700871DCC /* CPTTableViewCell.swift in Sources */,
+				B800F343230F07A300A53C07 /* ProfileViewController.swift in Sources */,
 				B830C4AF222EEE8F00871DCC /* ICDTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,10 +613,11 @@
 		};
 		8856847D222DF9EB00669E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 691DD71A3E9851E33FDC2D52 /* Pods-LZCoder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8QQU37LRP2;
+				DEVELOPMENT_TEAM = 77PZNJDUQL;
 				INFOPLIST_FILE = LZCoder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,10 +632,11 @@
 		};
 		8856847E222DF9EB00669E5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D5733BB254DEFF65517A82 /* Pods-LZCoder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8QQU37LRP2;
+				DEVELOPMENT_TEAM = 77PZNJDUQL;
 				INFOPLIST_FILE = LZCoder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,6 +651,7 @@
 		};
 		88568480222DF9EB00669E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 363B45602593149EB0968291 /* Pods-LZCoderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +673,7 @@
 		};
 		88568481222DF9EB00669E5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E616C0A5EBD65651EBCDD88D /* Pods-LZCoderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +695,7 @@
 		};
 		88568483222DF9EB00669E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E688EEAD289727A7D165114B /* Pods-LZCoderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +716,7 @@
 		};
 		88568484222DF9EB00669E5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E0D05BC9600E11276F12D0 /* Pods-LZCoderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
