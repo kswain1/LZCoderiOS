@@ -316,7 +316,7 @@
         <!--Profile-->
         <scene sceneID="5Q5-pC-Nbs">
             <objects>
-                <viewController id="RfP-bS-Msd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="RfP-bS-Msd" customClass="ProfileViewController" customModule="LZCoder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Qy-dy-NEI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -465,16 +465,53 @@
                                                 <rect key="frame" x="147" y="516" width="81" height="30"/>
                                                 <state key="normal" title="Save Profile"/>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwQ-xw-gUE">
+                                                <rect key="frame" x="32.5" y="64" width="75" height="30"/>
+                                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="lwc-8d-WEs"/>
+                                                </constraints>
+                                                <state key="normal" title="Male">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnGenderClicked:" destination="RfP-bS-Msd" eventType="touchUpInside" id="krt-C4-NiC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxV-xQ-LXr">
+                                                <rect key="frame" x="32.5" y="96" width="75" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="c2F-9w-pEV"/>
+                                                </constraints>
+                                                <state key="normal" title="Female">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnGenderClicked:" destination="RfP-bS-Msd" eventType="touchUpInside" id="xPJ-7M-8gA"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="BwB-zV-nA4" firstAttribute="top" secondItem="8jY-iz-DP7" secondAttribute="bottom" constant="20" id="0Aa-ch-VNX"/>
+                                            <constraint firstItem="AxV-xQ-LXr" firstAttribute="centerY" secondItem="79d-85-xvs" secondAttribute="centerY" constant="16" id="2FT-40-bdX"/>
                                             <constraint firstItem="CV7-B5-i2G" firstAttribute="top" secondItem="BwB-zV-nA4" secondAttribute="bottom" constant="15" id="3VX-9O-2S3"/>
                                             <constraint firstItem="u5a-Vr-WzY" firstAttribute="centerX" secondItem="iad-yN-Tlu" secondAttribute="centerX" id="4T6-bQ-U6V"/>
                                             <constraint firstItem="ozA-kL-x3W" firstAttribute="centerX" secondItem="iad-yN-Tlu" secondAttribute="centerX" id="8gF-Jb-SYX"/>
                                             <constraint firstItem="AOP-Yb-3sm" firstAttribute="centerX" secondItem="iad-yN-Tlu" secondAttribute="centerX" id="CQy-VF-41a"/>
                                             <constraint firstItem="79d-85-xvs" firstAttribute="centerX" secondItem="iad-yN-Tlu" secondAttribute="centerX" id="E0f-vx-cc6"/>
                                             <constraint firstItem="79d-85-xvs" firstAttribute="top" secondItem="iad-yN-Tlu" secondAttribute="top" constant="20" id="FaG-65-hnz"/>
+                                            <constraint firstItem="79d-85-xvs" firstAttribute="centerY" secondItem="PwQ-xw-gUE" secondAttribute="centerY" constant="16" id="GKz-Eq-DDO"/>
                                             <constraint firstAttribute="bottom" secondItem="u5a-Vr-WzY" secondAttribute="bottom" constant="20" id="IVD-2B-xlY"/>
                                             <constraint firstItem="ozA-kL-x3W" firstAttribute="top" secondItem="qg9-bN-iM7" secondAttribute="bottom" constant="15" id="IWr-oV-WcW"/>
                                             <constraint firstItem="CV7-B5-i2G" firstAttribute="width" secondItem="BwB-zV-nA4" secondAttribute="width" id="IfU-1F-zta"/>
@@ -484,11 +521,13 @@
                                             <constraint firstItem="qg9-bN-iM7" firstAttribute="top" secondItem="CV7-B5-i2G" secondAttribute="bottom" constant="15" id="dLm-Fe-fv7"/>
                                             <constraint firstItem="ozA-kL-x3W" firstAttribute="width" secondItem="BwB-zV-nA4" secondAttribute="width" id="g9x-GJ-Gg3"/>
                                             <constraint firstItem="8jY-iz-DP7" firstAttribute="centerX" secondItem="iad-yN-Tlu" secondAttribute="centerX" id="mff-dx-bOm"/>
+                                            <constraint firstItem="79d-85-xvs" firstAttribute="leading" secondItem="AxV-xQ-LXr" secondAttribute="trailing" constant="5" id="ni0-VE-YBg"/>
                                             <constraint firstItem="qg9-bN-iM7" firstAttribute="width" secondItem="BwB-zV-nA4" secondAttribute="width" id="rMZ-bc-MAy"/>
                                             <constraint firstItem="AOP-Yb-3sm" firstAttribute="width" secondItem="BwB-zV-nA4" secondAttribute="width" id="sv9-Jd-fG5"/>
                                             <constraint firstItem="BwB-zV-nA4" firstAttribute="centerX" secondItem="iad-yN-Tlu" secondAttribute="centerX" id="uMR-Lb-kZs"/>
                                             <constraint firstItem="CV7-B5-i2G" firstAttribute="centerX" secondItem="iad-yN-Tlu" secondAttribute="centerX" id="vNJ-gb-DNN"/>
                                             <constraint firstItem="BwB-zV-nA4" firstAttribute="width" secondItem="iad-yN-Tlu" secondAttribute="width" multiplier="0.75" id="vit-XW-WZr"/>
+                                            <constraint firstItem="79d-85-xvs" firstAttribute="leading" secondItem="PwQ-xw-gUE" secondAttribute="trailing" constant="5" id="w9s-ba-W3v"/>
                                             <constraint firstItem="u5a-Vr-WzY" firstAttribute="top" secondItem="AOP-Yb-3sm" secondAttribute="bottom" constant="20" id="yqs-LW-8xe"/>
                                         </constraints>
                                     </view>
@@ -515,6 +554,10 @@
                         <viewLayoutGuide key="safeArea" id="69G-ss-lwH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="SsY-B1-XtA"/>
+                    <connections>
+                        <outlet property="btnFemale" destination="AxV-xQ-LXr" id="hRN-7q-Pff"/>
+                        <outlet property="btnMale" destination="PwQ-xw-gUE" id="5g4-w7-Ofo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRq-l5-Vg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
