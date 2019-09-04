@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 enum CodeType {
     case CPT
@@ -174,6 +175,26 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "segueCPTDetails", sender: nil)
+    }
+    
+    func searchTermOnT2C(termText: String) {
+        let user = "dhaneshgosai@gmail.com"
+        let password = "Bdgosai@0622"
+        let credentialData = "\(user):\(password)".data(using: .utf8)
+        let base64Credentials = credentialData?.base64EncodedString()
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        let stringURL = "https://www.text2codes.com/T2C/home2api/apiFreeText.json"
+        let params = [ "NLP" : termText ]
+        
+        Alamofire.manager.request(.GET, stringURL,headers: headers, parameters: params as? [String : AnyObject])
+            .responseJSON { response  in
+                if (response.result.error == nil){
+                    success(data: response.result.value)
+                }else{
+                    fail(error: response.result.error)
+                }
+        }
+        
     }
     
 }

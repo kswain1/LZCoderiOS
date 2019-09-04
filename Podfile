@@ -8,7 +8,7 @@ target 'LZCoder' do
   # Pods for LZCoder
 
 pod 'IQKeyboardManagerSwift'
-
+pod 'Alamofire'
   target 'LZCoderTests' do
     inherit! :search_paths
     # Pods for testing
