@@ -177,6 +177,34 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
         self.performSegue(withIdentifier: "segueCPTDetails", sender: nil)
     }
     
+    
+    
+}
+
+extension SearchViewController : UISearchBarDelegate {
+    
+    // This method updates filteredVenueList based on the text in the Search Box
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        // When there is no text, filteredVenueList is the same as the original data
+        // When user has entered text into the search box
+        // Use the filter method to iterate over all items in the data array
+        // For each item, return true if the item should be included and false if the
+        // item should NOT be included
+        
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        return true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        searchBar.resignFirstResponder()
+        if (searchBar.text != nil) && searchBar.text!.count >= 3 {
+            searchTermOnT2C(termText: searchBar.text!)
+        }
+        
+    }
+    
     func searchTermOnT2C(termText: String) {
         let user = "dhaneshgosai@gmail.com"
         let password = "Bdgosai@0622"
@@ -186,12 +214,14 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
         let stringURL = "https://www.text2codes.com/T2C/home2api/apiFreeText.json"
         let params = [ "NLP" : termText ]
         
-        Alamofire.manager.request(.GET, stringURL,headers: headers, parameters: params as? [String : AnyObject])
+        request(stringURL, method: HTTPMethod.get, parameters: params, headers: headers)
             .responseJSON { response  in
                 if (response.result.error == nil){
-                    success(data: response.result.value)
+                    //                    success(data: response.result.value)
+                    print(response)
                 }else{
-                    fail(error: response.result.error)
+                    //                    fail(error: response.result.error)
+                    print(response.result.error)
                 }
         }
         
