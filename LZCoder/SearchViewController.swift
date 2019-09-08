@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 enum CodeType {
     case CPT
@@ -22,45 +23,45 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tblCodes: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var codesCPTArray:[[String:Any]]?
-    var codesICDArray:[[String:Any]]?
+    var codesCPTArray:JSON?
+    var codesICDArray:JSON?
     
     var selectedCodeType = CodeType.CPT
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        getDataFromT2CAPI()
         self.btnCPT.layer.borderWidth = 1.0
         self.btnCPT.layer.borderColor = UIColor.blue.cgColor
         self.btnICD.layer.borderWidth = 0.0
         self.btnICD.layer.borderColor = UIColor.clear.cgColor
         
-        self.codesCPTArray = [["amount":27824,
-                      "isSelected":false,
-                      "detialText":"Closed treatment of fracture of weight-bearing articular portion of distal tibia with or without anesthesia; without manipulation…"],
-                     ["amount":27825,
-                      "isSelected":false,
-                      "detialText":"Closed treatment of fracture of weight-bearing articular portion of distal tibia with or without anesthesia; without manipulation…"],
-                     ["amount":27826,
-                      "isSelected":false,
-                      "detialText":"Closed treatment of fracture of weight-bearing articular portion of distal tibia with or without anesthesia; without manipulation…"],
-                     ["amount":27827,
-                      "isSelected":false,
-                      "detialText":"Closed treatment of fracture of weight-bearing articular portion of distal tibia with or without anesthesia; without manipulation…"]]
-        
-        self.codesICDArray = [["amount":93.56,
-                               "isSelected":false,
-                               "detialText":"Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh with mcc"],
-                              ["amount":93.57,
-                               "isSelected":false,
-                               "detialText":"Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh with mcc"],
-                              ["amount":93.58,
-                               "isSelected":false,
-                               "detialText":"Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh with mcc"],
-                              ["amount":93.59,
-                               "isSelected":false,
-                               "detialText":"Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh with mcc"]]
+//        self.codesCPTArray = [["amount":27824,
+//                      "isSelected":false,
+//                      "detialText":"Closed treatment of fracture of weight-bearing articular portion of distal tibia with or without anesthesia; without manipulation…"],
+//                     ["amount":27825,
+//                      "isSelected":false,
+//                      "detialText":"Closed treatment of fracture of weight-bearing articular portion of distal tibia with or without anesthesia; without manipulation…"],
+//                     ["amount":27826,
+//                      "isSelected":false,
+//                      "detialText":"Closed treatment of fracture of weight-bearing articular portion of distal tibia with or without anesthesia; without manipulation…"],
+//                     ["amount":27827,
+//                      "isSelected":false,
+//                      "detialText":"Closed treatment of fracture of weight-bearing articular portion of distal tibia with or without anesthesia; without manipulation…"]]
+//
+//        self.codesICDArray = [["amount":93.56,
+//                               "isSelected":false,
+//                               "detialText":"Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh with mcc"],
+//                              ["amount":93.57,
+//                               "isSelected":false,
+//                               "detialText":"Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh with mcc"],
+//                              ["amount":93.58,
+//                               "isSelected":false,
+//                               "detialText":"Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh with mcc"],
+//                              ["amount":93.59,
+//                               "isSelected":false,
+//                               "detialText":"Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh with mcc"]]
         
     }
     
@@ -100,12 +101,43 @@ class SearchViewController: UIViewController {
             let destiVC = segue.destination as? CPTDetailViewController
             destiVC?.codesCPTArray = self.codesCPTArray
             destiVC?.codesICDArray = self.codesICDArray
+            destiVC?.selectedCodeType =  selectedCodeType
+            let object = sender as? JSON
+            switch selectedCodeType {
+            case .CPT:
+                destiVC?.selectedCode = object!["CPTcode"].stringValue
+                destiVC?.selectedCodeDesc = object!["LongDesc"].stringValue
+                
+            case .ICD:
+                destiVC?.selectedCode = object!["ProcCode"].stringValue
+                destiVC?.selectedCodeDesc = object!["ProcDesc"].stringValue
+                
+            }
+            
         }
         
     }
     
     @objc func btnCheckBoxClicked(sender: UIButton){
         sender.isSelected = !sender.isSelected
+    }
+    
+    func getDataFromT2CAPI() {
+        
+        if let path = Bundle.main.path(forResource: "apiSinglePhrase", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let jsonObj = try JSON(data: data)
+                self.codesCPTArray = jsonObj["CPThcpcs"]
+                self.codesICDArray = jsonObj["ICD10Procedure"]
+                self.tblCodes.reloadData()
+                print("jsonData:\(jsonObj)")
+            } catch let error {
+                print("parse error: \(error.localizedDescription)")
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
     }
 }
 
@@ -140,10 +172,12 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
         switch selectedCodeType {
         case .CPT:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CPTCell", for: indexPath) as? CPTTableViewCell
-            let amount = self.codesCPTArray?[indexPath.row]["amount"]
-            cell?.lblAmount.text = "\(amount ?? 0)"
-            cell?.lblDesc.text = self.codesCPTArray?[indexPath.row]["detialText"] as? String
-            cell?.btnCheckBox.isSelected = self.codesCPTArray?[indexPath.row]["isSelected"] as? Bool ?? false
+            
+            let object = self.codesCPTArray![indexPath.row]
+            let amount = object["FacTotal"].stringValue
+            cell?.lblAmount.text = "$\(amount)"
+            cell?.lblDesc.text = object["LongDesc"].stringValue
+//            cell?.btnCheckBox.isSelected = self.codesCPTArray?[indexPath.row]["isSelected"] as? Bool ?? false
 //            cell?.btnCheckBox.addTarget(self, action: Selecto, for: .touchUpInside)
             cell?.btnCheckBox.addTarget(self, action: #selector(SearchViewController.btnCheckBoxClicked(sender:)), for: .touchUpInside)
             cell?.btnCheckBox.tag = indexPath.row
@@ -152,20 +186,19 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
             return cell!
         case .ICD:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ICDCell", for: indexPath) as? ICDTableViewCell
-            let amount = self.codesICDArray?[indexPath.row]["amount"]
-            cell?.lblAmount.text = "$\(amount ?? 0)"
-            cell?.lblDesc.text = self.codesICDArray?[indexPath.row]["detialText"] as? String
-            cell?.btnCheckBox.isSelected = self.codesICDArray?[indexPath.row]["isSelected"] as? Bool ?? false
+            
+            let object = self.codesICDArray![indexPath.row]
+            let amount = object["ProcCode"].stringValue
+            cell?.lblAmount.text = "\(amount)"
+            cell?.lblDesc.text = object["ProcDesc"].stringValue
+//            cell?.btnCheckBox.isSelected = self.codesICDArray?[indexPath.row]["isSelected"] as? Bool ?? false
             cell?.btnCheckBox.addTarget(self, action: #selector(SearchViewController.btnCheckBoxClicked(sender:)), for: .touchUpInside)
             cell?.btnCheckBox.tag = indexPath.row
             cell?.selectionStyle = .none
 //            configureCell(cell: cell, forRowAt: indexPath)
             return cell!
         }
-        
     }
-    
-    
     
     func configureCell(cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
@@ -174,7 +207,15 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
     //MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "segueCPTDetails", sender: nil)
+        let object : JSON?
+        switch selectedCodeType {
+        case .CPT:
+            object = self.codesCPTArray?[indexPath.row]
+        case .ICD:
+            object = self.codesICDArray?[indexPath.row]
+        }
+            
+        self.performSegue(withIdentifier: "segueCPTDetails", sender: object)
     }
     
     
@@ -206,25 +247,15 @@ extension SearchViewController : UISearchBarDelegate {
     }
     
     func searchTermOnT2C(termText: String) {
-        let user = "dhaneshgosai@gmail.com"
-        let password = "Bdgosai@0622"
-        let credentialData = "\(user):\(password)".data(using: .utf8)
-        let base64Credentials = credentialData?.base64EncodedString()
-        let headers = ["Authorization": "Basic \(base64Credentials)"]
-        let stringURL = "https://www.text2codes.com/T2C/home2api/apiFreeText.json"
-        let params = [ "NLP" : termText ]
+        let params : Parameters = [ "NLP" : termText ]
         
-        request(stringURL, method: HTTPMethod.get, parameters: params, headers: headers)
-            .responseJSON { response  in
-                if (response.result.error == nil){
-                    //                    success(data: response.result.value)
-                    print(response)
-                }else{
-                    //                    fail(error: response.result.error)
-                    print(response.result.error)
-                }
+        CodeNetwork().getCodesList(params: params) { (response) in
+            if (response.result.error == nil){
+                print(response)
+            }else{
+                print(response.result.error)
+            }
         }
-        
     }
     
 }

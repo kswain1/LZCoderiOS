@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CPTDetailViewController: UIViewController {
     
-    var codesCPTArray:[[String:Any]]?
-    var codesICDArray:[[String:Any]]?
+    var codesCPTArray:JSON?
+    var codesICDArray:JSON?
+    var detailCodeArray:JSON?
+    var selectedCode = ""
+    var selectedCodeDesc = ""
     
     @IBOutlet weak var collectionViewCPT: UICollectionView!
     @IBOutlet weak var collectionViewICD: UICollectionView!
+    @IBOutlet weak var lblCodeName: UILabel!
+    @IBOutlet weak var lblCodeDetails: UILabel!
     
     var selectedCodeType = CodeType.CPT
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        self.lblCodeDetails.text = selectedCodeDesc
+        getCodeDetailFromAPI()
         // Do any additional setup after loading the view.
     }
     
@@ -33,16 +39,41 @@ class CPTDetailViewController: UIViewController {
         sender.isSelected = !sender.isSelected
     }
     
-    /*
-     
-     // MARK: - Navigation
+    func getCodeDetailFromAPI() {
+        var fileName = ""
+        switch selectedCodeType {
+        case .CPT:
+            fileName = "47570"
+        case .ICD:
+            fileName = "35351"
+        }
+        if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let jsonObj = try JSON(data: data)
+                detailCodeArray = jsonObj["CPTDetails"]
+                switch selectedCodeType {
+                case .CPT:
+                    self.lblCodeName.text = "CPT Code: \(jsonObj["SearchWith"].stringValue)"
+                case .ICD:
+                    self.lblCodeName.text = "ICD-10 Code: \(jsonObj["SearchWith"].stringValue)"
+                }
+                print("jsonData:\(jsonObj)")
+            } catch let error {
+                print("parse error: \(error.localizedDescription)")
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
+//        CodeNetwork().getCodesDetails(code: "47570") { (response) in
+//            if (response.result.error == nil){
+//                print(response)
+//            }else{
+//                print(response.result.error)
+//            }
+//        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
 
@@ -57,9 +88,9 @@ extension CPTDetailViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch selectedCodeType {
         case .CPT:
-            return self.codesCPTArray?.count ?? 0
+            return self.detailCodeArray?.count ?? 0
         case .ICD:
-            return self.codesICDArray?.count ?? 0
+            return self.detailCodeArray?.count ?? 0
         }
     }
     
@@ -69,16 +100,18 @@ extension CPTDetailViewController: UICollectionViewDataSource, UICollectionViewD
         if collectionView == self.collectionViewCPT {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPTColCell", for: indexPath) as? DetailViewCell
             //            configureCell(cell: cell, forItemAt: indexPath)
-            let amount = self.codesCPTArray?[indexPath.row]["amount"]
-            cell?.lblAmount.text = "\(amount ?? 0)"
-            cell?.lblDesc.text = self.codesCPTArray?[indexPath.row]["detialText"] as? String
+            let object = self.detailCodeArray![indexPath.row]
+            let amount = object["FacTotal"].stringValue
+            cell?.lblAmount.text = "$\(amount)"
+            cell?.lblDesc.text = object["StatusCode"].stringValue
             return cell!
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ICDColCell", for: indexPath) as? DetailViewCell
             //            configureCell(cell: cell, forItemAt: indexPath)
-            let amount = self.codesICDArray?[indexPath.row]["amount"]
-            cell?.lblAmount.text = "$\(amount ?? 0)"
-            cell?.lblDesc.text = self.codesICDArray?[indexPath.row]["detialText"] as? String
+            let object = self.detailCodeArray![indexPath.row]
+            let amount = object["FacTotal"].stringValue
+            cell?.lblAmount.text = "$\(amount)"
+            cell?.lblDesc.text = object["MultProc"].stringValue
             return cell!
         }
         
@@ -89,11 +122,7 @@ extension CPTDetailViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         return CGSize(width: collectionView.frame.size.width/3 - 5, height: collectionView.frame.size.height)
-        
     }
-    
-    
     
 }
