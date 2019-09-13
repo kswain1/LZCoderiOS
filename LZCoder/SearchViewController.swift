@@ -122,6 +122,9 @@ class SearchViewController: UIViewController {
         sender.isSelected = !sender.isSelected
     }
     
+    @IBAction func btnAddToCartClicked(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 2
+    }
     func getDataFromT2CAPI() {
         
         if let path = Bundle.main.path(forResource: "apiSinglePhrase", ofType: "json") {

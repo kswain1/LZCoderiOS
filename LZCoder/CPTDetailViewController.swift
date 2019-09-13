@@ -38,6 +38,9 @@ class CPTDetailViewController: UIViewController {
     @IBAction func btnCheckClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
     }
+    @IBAction func btnAddToCartClick(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 2
+    }
     
     func getCodeDetailFromAPI() {
         var fileName = ""

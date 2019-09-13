@@ -256,6 +256,9 @@
                                         <state key="normal" title="Add to Cart" image="add">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnAddToCartClicked:" destination="HGx-Bn-dJX" eventType="touchUpInside" id="rFb-bW-giu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,22 +302,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JU-R5-Xc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1844" y="456.52173913043481"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="RAE-YR-Ap8">
-            <objects>
-                <viewController id="998-Ds-8X6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="COf-n2-ntq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="qRj-Ay-pgP"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="02Y-R0-LXj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="esJ-KA-Qa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-100" y="1253"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5Q5-pC-Nbs">
@@ -578,7 +565,7 @@
                     <connections>
                         <segue destination="RfP-bS-Msd" kind="relationship" relationship="viewControllers" id="bsA-PZ-sdT"/>
                         <segue destination="fHG-u2-Z5T" kind="relationship" relationship="viewControllers" id="b9t-c8-h2V"/>
-                        <segue destination="998-Ds-8X6" kind="relationship" relationship="viewControllers" id="7qU-RF-743"/>
+                        <segue destination="MoR-LW-hTK" kind="relationship" relationship="viewControllers" id="nIp-QV-oZo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szr-KX-tmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -699,7 +686,7 @@
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="MoR-LW-hTK" kind="show" id="rUR-HF-zYy"/>
+                                                            <action selector="btnAddToCartClick:" destination="EFl-sq-gdU" eventType="touchUpInside" id="fUJ-Z8-wal"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fracture, sprain, strain, and dislocation except femur, hip, pelvis, and thigh without mcc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dof-U8-7e5">
@@ -1046,7 +1033,7 @@
             </objects>
             <point key="canvasLocation" x="2708" y="456.97151424287858"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart-->
         <scene sceneID="EO5-f4-Tfq">
             <objects>
                 <viewController id="MoR-LW-hTK" sceneMemberID="viewController">
@@ -1341,10 +1328,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qUO-jx-zZ2"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cart" image="Cart-nav" id="Nbl-Dl-alb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAg-vz-42l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3528.8000000000002" y="457.42128935532236"/>
+            <point key="canvasLocation" x="1844" y="1227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Tx-08-7WH">
