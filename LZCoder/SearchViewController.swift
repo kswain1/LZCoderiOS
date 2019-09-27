@@ -256,6 +256,10 @@ extension SearchViewController : UISearchBarDelegate {
                 print(response.result.error)
             }
         }
+        
+        CodeNetwork().getApiSinglePhrase(code: termText) { (response) in
+            print("hello", response)
+        }
     }
     
 }

@@ -18,10 +18,10 @@ class BaseNetworking {
     var headers: HTTPHeaders = [:]
     
     func httpHeaders() -> HTTPHeaders{
-        let user = "dhaneshgosai@gmail.com"
-        let password = "Bdgosai@0622"
-        let credentialData = "\(user):\(password)".data(using: .utf8)
-        let base64Credentials = credentialData?.base64EncodedString()
+        let username = "lzcoder95@gmail.com"
+        let password = "lzcoder123"
+        let credentialData = "\(username):\(password)".data(using: .utf8)
+        let base64Credentials = credentialData?.base64EncodedString(options: [])
         headers = ["Authorization": "Basic \(base64Credentials)"]
         return headers
     }
