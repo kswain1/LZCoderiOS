@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import MBProgressHUD
 
 class CPTDetailViewController: UIViewController {
     
@@ -50,31 +51,53 @@ class CPTDetailViewController: UIViewController {
         case .ICD:
             fileName = "35351"
         }
-        if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                let jsonObj = try JSON(data: data)
-                detailCodeArray = jsonObj["CPTDetails"]
-                switch selectedCodeType {
-                case .CPT:
-                    self.lblCodeName.text = "CPT Code: \(jsonObj["SearchWith"].stringValue)"
-                case .ICD:
-                    self.lblCodeName.text = "ICD-10 Code: \(jsonObj["SearchWith"].stringValue)"
-                }
-                print("jsonData:\(jsonObj)")
-            } catch let error {
-                print("parse error: \(error.localizedDescription)")
-            }
-        } else {
-            print("Invalid filename/path.")
-        }
-//        CodeNetwork().getCodesDetails(code: "47570") { (response) in
-//            if (response.result.error == nil){
-//                print(response)
-//            }else{
-//                print(response.result.error)
+//        if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
+//            do {
+//                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+//                let jsonObj = try JSON(data: data)
+//                detailCodeArray = jsonObj["CPTDetails"]
+//                switch selectedCodeType {
+//                case .CPT:
+//                    self.lblCodeName.text = "CPT Code: \(jsonObj["SearchWith"].stringValue)"
+//                case .ICD:
+//                    self.lblCodeName.text = "ICD-10 Code: \(jsonObj["SearchWith"].stringValue)"
+//                }
+//                print("jsonData:\(jsonObj)")
+//            } catch let error {
+//                print("parse error: \(error.localizedDescription)")
 //            }
+//        } else {
+//            print("Invalid filename/path.")
 //        }
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        CodeNetwork().getCodesDetails(code: self.selectedCode) { (response) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if (response.result.error == nil){
+                
+                if let data = response.data {
+                
+                do {
+                    let jsonObj = try JSON(data: data)
+                    self.detailCodeArray = jsonObj["CPTDetails"]
+                    switch self.selectedCodeType {
+                    case .CPT:
+                        self.lblCodeName.text = "CPT Code: \(jsonObj["SearchWith"].stringValue)"
+                    case .ICD:
+                        self.lblCodeName.text = "ICD-10 Code: \(jsonObj["SearchWith"].stringValue)"
+                    }
+                    print("jsonData:\(jsonObj)")
+                    self.collectionViewCPT.reloadData()
+                    self.collectionViewICD.reloadData()
+                    } catch {
+                        print(error.localizedDescription)
+                        // self.displayError(message: "Unable to fetch brand denominations")
+                    }
+                }
+                
+            }else{
+                print(response.result.error)
+            }
+        }
 
     }
 

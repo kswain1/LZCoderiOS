@@ -11,7 +11,6 @@ import Alamofire
 import SwiftyJSON
 import MBProgressHUD
 
-
 enum CodeType {
     case CPT
     case ICD

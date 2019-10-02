@@ -25,7 +25,7 @@ class CodeNetwork: BaseNetworking {
     }
     
     func getCodesDetails(code:String, completionHandler: @escaping (_ response: DataResponse<Data>) -> Void ) {
-        request("\(Api.BaseUrl)\(code).json", method: .get, headers: httpHeaders()).responseData { (responseData) in
+        request("\(Api.BaseUrl)apiCPTCodeDetails/\(code).json", method: .get, headers: httpHeaders()).responseData { (responseData) in
             completionHandler(responseData)
         }
     }
