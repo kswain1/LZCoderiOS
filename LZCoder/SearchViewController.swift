@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MBProgressHUD
+
 
 enum CodeType {
     case CPT
@@ -31,7 +33,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        getDataFromT2CAPI()
+//        getDataFromT2CAPI()
         self.btnCPT.layer.borderWidth = 1.0
         self.btnCPT.layer.borderColor = UIColor.blue.cgColor
         self.btnICD.layer.borderWidth = 0.0
@@ -111,11 +113,8 @@ class SearchViewController: UIViewController {
             case .ICD:
                 destiVC?.selectedCode = object!["ProcCode"].stringValue
                 destiVC?.selectedCodeDesc = object!["ProcDesc"].stringValue
-                
             }
-            
         }
-        
     }
     
     @objc func btnCheckBoxClicked(sender: UIButton){
@@ -250,11 +249,27 @@ extension SearchViewController : UISearchBarDelegate {
     }
     
     func searchTermOnT2C(termText: String) {
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
         let params : Parameters = [ "NLP" : termText ]
         
-        CodeNetwork().getCodesList(params: params) { (response) in
+        CodeNetwork().getSearchCodesList(searchText: termText,params: params) { (response) in
+            MBProgressHUD.hide(for: self.view, animated: true)
             if (response.result.error == nil){
-                print(response)
+                print("Response ",response.result)
+                if let data = response.data {
+                    
+                    do {
+                        let jsonObj = try JSON(data: data)
+                        self.codesCPTArray = jsonObj["CPThcpcs"]
+                        self.codesICDArray = jsonObj["ICD10Procedure"]
+                        self.tblCodes.reloadData()
+                    } catch {
+                        print(error.localizedDescription)
+                        // self.displayError(message: "Unable to fetch brand denominations")
+                    }
+                }
             }else{
                 print(response.result.error)
             }

@@ -22,7 +22,7 @@ class BaseNetworking {
         let password = "lzcoder123"
         let credentialData = "\(user):\(password)".data(using: .utf8)
         let base64Credentials = credentialData?.base64EncodedString()
-        headers = ["Authorization": "Basic \(base64Credentials)"]
+        headers = ["Authorization": "Basic \(base64Credentials ?? "")"]
         return headers
     }
 

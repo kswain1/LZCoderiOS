@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "B3325D2C-B670-4222-BA6E-C5FD62043218"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACD10FA6-9045-4394-AE1E-29B1986AB1C6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LZCoder/SearchViewController.swift"
+            timestampString = "590689398.454031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "searchTermOnT2C(termText:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

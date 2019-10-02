@@ -10,6 +10,7 @@ target 'LZCoder' do
 pod 'IQKeyboardManagerSwift'
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'MBProgressHUD'
 
   target 'LZCoderTests' do
     inherit! :search_paths
