@@ -7,43 +7,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BC418507-AA78-4091-A2AB-566AEFB3E837"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LZCoder/CPTDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "getCodeDetailFromAPI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "82720FDE-20C0-4FB3-B7D7-DEAA118DC741"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LZCoder/CPTDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "getCodeDetailFromAPI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "34D5A2F9-BD6C-401C-8FDC-C0D4D08E039F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LZCoder/Network/CodeNetwork.swift"
+            timestampString = "0"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -52,7 +21,6 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "34D5A2F9-BD6C-401C-8FDC-C0D4D08E039F - 96ec53a1e024556e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -60,14 +28,14 @@
                   moduleName = "LZCoder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/Dhanesh%20Data/Projects/OtherProjects/Kehlin/LZCoder/LZCoder_Git/LZCoderiOS/LZCoder/Network/CodeNetwork.swift"
+                  timestampString = "592768879.154458"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
                   endingLineNumber = "28"
-                  offsetFromSymbolStart = "74">
+                  offsetFromSymbolStart = "72">
                </Location>
                <Location
-                  uuid = "34D5A2F9-BD6C-401C-8FDC-C0D4D08E039F - e777c5c5cbb9abb4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -75,11 +43,12 @@
                   moduleName = "LZCoder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/Dhanesh%20Data/Projects/OtherProjects/Kehlin/LZCoder/LZCoder_Git/LZCoderiOS/LZCoder/Network/CodeNetwork.swift"
+                  timestampString = "592768879.158029"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
                   endingLineNumber = "29"
-                  offsetFromSymbolStart = "41">
+                  offsetFromSymbolStart = "37">
                </Location>
             </Locations>
          </BreakpointContent>

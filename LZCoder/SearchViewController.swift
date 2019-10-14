@@ -25,7 +25,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var codesCPTArray:JSON?
+    var selectedCPT :[Int] = []
     var codesICDArray:JSON?
+    var selectedICD :[Int] = []
     
     var selectedCodeType = CodeType.CPT
     
@@ -118,9 +120,43 @@ class SearchViewController: UIViewController {
     
     @objc func btnCheckBoxClicked(sender: UIButton){
         sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            switch selectedCodeType {
+                case .CPT:
+                    let obj = self.codesCPTArray![sender.tag]
+                    self.selectedCPT.append(obj["id"].intValue)
+                case .ICD:
+                    let obj = self.codesICDArray![sender.tag]
+                    self.selectedICD.append(obj["id"].intValue)
+            }
+        } else {
+            switch selectedCodeType {
+                case .CPT:
+                    let obj = self.codesCPTArray![sender.tag]
+                    if let index = self.selectedCPT.index(of: obj["id"].intValue) {
+                        self.selectedCPT.remove(at: index)
+                    }
+                case .ICD:
+                    let obj = self.codesICDArray![sender.tag]
+                    if let index = self.selectedICD.index(of: obj["id"].intValue) {
+                        self.selectedICD.remove(at: index)
+                    }
+            }
+        }
     }
     
     @IBAction func btnAddToCartClicked(_ sender: Any) {
+        //Get All Selected Data
+        let cptArray = self.codesCPTArray?.arrayObject as! [Dictionary<String, Any>]
+        let filterCPT = cptArray.filter({ selectedCPT.contains($0["id"] as! Int)})
+        let icdArray = self.codesICDArray?.arrayObject as! [Dictionary<String, Any>]
+        let filtericd = icdArray.filter({ selectedICD.contains($0["id"] as! Int)})
+        
+        UserDefaults.standard.set(filterCPT, forKey: "CPTCart")
+        UserDefaults.standard.set(filtericd, forKey: "ICDCart")
+        UserDefaults.standard.synchronize()
+//        print(filterCPT)
+//        print(filtericd)
         self.tabBarController?.selectedIndex = 2
     }
     func getDataFromT2CAPI() {
@@ -178,6 +214,12 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
             let amount = object["FacTotal"].stringValue
             cell?.lblAmount.text = "$\(amount)"
             cell?.lblDesc.text = object["LongDesc"].stringValue
+            
+            if selectedCPT.contains(object["id"].intValue) {
+                cell?.btnCheckBox.isSelected = true
+            } else {
+                cell?.btnCheckBox.isSelected = false
+            }
 //            cell?.btnCheckBox.isSelected = self.codesCPTArray?[indexPath.row]["isSelected"] as? Bool ?? false
 //            cell?.btnCheckBox.addTarget(self, action: Selecto, for: .touchUpInside)
             cell?.btnCheckBox.addTarget(self, action: #selector(SearchViewController.btnCheckBoxClicked(sender:)), for: .touchUpInside)
@@ -192,6 +234,12 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate {
             let amount = object["ProcCode"].stringValue
             cell?.lblAmount.text = "\(amount)"
             cell?.lblDesc.text = object["ProcDesc"].stringValue
+            
+            if selectedICD.contains(object["id"].intValue) {
+                cell?.btnCheckBox.isSelected = true
+            } else {
+                cell?.btnCheckBox.isSelected = false
+            }
 //            cell?.btnCheckBox.isSelected = self.codesICDArray?[indexPath.row]["isSelected"] as? Bool ?? false
             cell?.btnCheckBox.addTarget(self, action: #selector(SearchViewController.btnCheckBoxClicked(sender:)), for: .touchUpInside)
             cell?.btnCheckBox.tag = indexPath.row
@@ -262,7 +310,9 @@ extension SearchViewController : UISearchBarDelegate {
                     do {
                         let jsonObj = try JSON(data: data)
                         self.codesCPTArray = jsonObj["CPThcpcs"]
+                        print("codesCPTArray ",self.codesCPTArray)
                         self.codesICDArray = jsonObj["ICD10Procedure"]
+                        print("codesICDArray ",self.codesICDArray)
                         self.tblCodes.reloadData()
                     } catch {
                         print(error.localizedDescription)

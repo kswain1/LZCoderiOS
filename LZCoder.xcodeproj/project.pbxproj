@@ -25,6 +25,8 @@
 		B800F351230F0DF800A53C07 /* LZFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800F350230F0DF800A53C07 /* LZFloatingLabelTextField.swift */; };
 		B830C4AD222EEE7700871DCC /* CPTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830C4AC222EEE7700871DCC /* CPTTableViewCell.swift */; };
 		B830C4AF222EEE8F00871DCC /* ICDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830C4AE222EEE8F00871DCC /* ICDTableViewCell.swift */; };
+		B83B0F292354E92500FC1003 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B0F282354E92500FC1003 /* CartViewController.swift */; };
+		B83B0F2B2354EB9200FC1003 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B0F2A2354EB9200FC1003 /* CartTableViewCell.swift */; };
 		B848D7FB222E278D00F71BB2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848D7FA222E278D00F71BB2 /* SearchViewController.swift */; };
 		B84D301723237E4A008F36FD /* 47570.json in Resources */ = {isa = PBXBuildFile; fileRef = B84D301623237E4A008F36FD /* 47570.json */; };
 		B84D301A2323DFD2008F36FD /* CodeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D30192323DFD2008F36FD /* CodeNetwork.swift */; };
@@ -79,6 +81,8 @@
 		B800F350230F0DF800A53C07 /* LZFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		B830C4AC222EEE7700871DCC /* CPTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTTableViewCell.swift; sourceTree = "<group>"; };
 		B830C4AE222EEE8F00871DCC /* ICDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICDTableViewCell.swift; sourceTree = "<group>"; };
+		B83B0F282354E92500FC1003 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		B83B0F2A2354EB9200FC1003 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		B848D7FA222E278D00F71BB2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B84D301623237E4A008F36FD /* 47570.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 47570.json; sourceTree = "<group>"; };
 		B84D30192323DFD2008F36FD /* CodeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeNetwork.swift; sourceTree = "<group>"; };
@@ -160,10 +164,12 @@
 				88568457222DF9EA00669E5A /* AppDelegate.swift */,
 				88568459222DF9EA00669E5A /* ViewController.swift */,
 				B848D7FA222E278D00F71BB2 /* SearchViewController.swift */,
+				B83B0F282354E92500FC1003 /* CartViewController.swift */,
 				B800F342230F07A300A53C07 /* ProfileViewController.swift */,
 				1E1587D8222FD3D80054E751 /* CPTDetailViewController.swift */,
 				B830C4AC222EEE7700871DCC /* CPTTableViewCell.swift */,
 				1E1587DA222FDEA20054E751 /* DetailViewCell.swift */,
+				B83B0F2A2354EB9200FC1003 /* CartTableViewCell.swift */,
 				B830C4AE222EEE8F00871DCC /* ICDTableViewCell.swift */,
 				8856845B222DF9EA00669E5A /* Main.storyboard */,
 				8856845E222DF9EB00669E5A /* Assets.xcassets */,
@@ -457,6 +463,7 @@
 			files = (
 				B800F34C230F0D6C00A53C07 /* UITextField+fixCaretPosition.swift in Sources */,
 				B800F351230F0DF800A53C07 /* LZFloatingLabelTextField.swift in Sources */,
+				B83B0F292354E92500FC1003 /* CartViewController.swift in Sources */,
 				B848D7FB222E278D00F71BB2 /* SearchViewController.swift in Sources */,
 				8856845A222DF9EA00669E5A /* ViewController.swift in Sources */,
 				B800F34B230F0D6C00A53C07 /* UIView+Border.swift in Sources */,
@@ -466,6 +473,7 @@
 				1E1587D9222FD3D80054E751 /* CPTDetailViewController.swift in Sources */,
 				B830C4AD222EEE7700871DCC /* CPTTableViewCell.swift in Sources */,
 				B84D301A2323DFD2008F36FD /* CodeNetwork.swift in Sources */,
+				B83B0F2B2354EB9200FC1003 /* CartTableViewCell.swift in Sources */,
 				B800F343230F07A300A53C07 /* ProfileViewController.swift in Sources */,
 				B830C4AF222EEE8F00871DCC /* ICDTableViewCell.swift in Sources */,
 			);
