@@ -17,6 +17,7 @@ class CPTDetailViewController: UIViewController {
     var detailCodeArray:JSON?
     var selectedCode = ""
     var selectedCodeDesc = ""
+    var selectObject : [String : Any]?
     
     @IBOutlet weak var collectionViewCPT: UICollectionView!
     @IBOutlet weak var collectionViewICD: UICollectionView!
@@ -40,7 +41,20 @@ class CPTDetailViewController: UIViewController {
         sender.isSelected = !sender.isSelected
     }
     @IBAction func btnAddToCartClick(_ sender: Any) {
+        
+        switch selectedCodeType {
+        case .CPT:
+            var cptCartData = UserDefaults.standard.array(forKey: "CPTCart") as? [[String : Any]]
+            cptCartData?.append(self.selectObject!)
+            UserDefaults.standard.set(cptCartData, forKey: "CPTCart")
+        case .ICD:
+            var icdCartData = UserDefaults.standard.array(forKey: "ICDCart") as? [[String : Any]]
+            icdCartData?.append(self.selectObject!)
+            UserDefaults.standard.set(icdCartData, forKey: "ICDCart")
+        }
+        UserDefaults.standard.synchronize()
         self.tabBarController?.selectedIndex = 2
+        
     }
     
     func getCodeDetailFromAPI() {

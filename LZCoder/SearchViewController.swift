@@ -110,10 +110,11 @@ class SearchViewController: UIViewController {
             case .CPT:
                 destiVC?.selectedCode = object!["CPTcode"].stringValue
                 destiVC?.selectedCodeDesc = object!["LongDesc"].stringValue
-                
+                destiVC?.selectObject = object?.dictionaryObject
             case .ICD:
                 destiVC?.selectedCode = object!["ProcCode"].stringValue
                 destiVC?.selectedCodeDesc = object!["ProcDesc"].stringValue
+                destiVC?.selectObject = object?.dictionaryObject
             }
         }
     }
