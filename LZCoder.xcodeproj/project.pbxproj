@@ -31,6 +31,7 @@
 		B84D301723237E4A008F36FD /* 47570.json in Resources */ = {isa = PBXBuildFile; fileRef = B84D301623237E4A008F36FD /* 47570.json */; };
 		B84D301A2323DFD2008F36FD /* CodeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D30192323DFD2008F36FD /* CodeNetwork.swift */; };
 		B84D301C2323E1A8008F36FD /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84D301B2323E1A8008F36FD /* BaseNetworking.swift */; };
+		B8BF5F1123578AF600A1340C /* ProjectListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BF5F1023578AF600A1340C /* ProjectListTableViewCell.swift */; };
 		B8D78FFA2322178100F1E623 /* 35351.json in Resources */ = {isa = PBXBuildFile; fileRef = B8D78FF82322178000F1E623 /* 35351.json */; };
 		B8D78FFB2322178100F1E623 /* apiSinglePhrase.json in Resources */ = {isa = PBXBuildFile; fileRef = B8D78FF92322178000F1E623 /* apiSinglePhrase.json */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		B84D301623237E4A008F36FD /* 47570.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 47570.json; sourceTree = "<group>"; };
 		B84D30192323DFD2008F36FD /* CodeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeNetwork.swift; sourceTree = "<group>"; };
 		B84D301B2323E1A8008F36FD /* BaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworking.swift; sourceTree = "<group>"; };
+		B8BF5F1023578AF600A1340C /* ProjectListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListTableViewCell.swift; sourceTree = "<group>"; };
 		B8D78FF82322178000F1E623 /* 35351.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 35351.json; sourceTree = "<group>"; };
 		B8D78FF92322178000F1E623 /* apiSinglePhrase.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apiSinglePhrase.json; sourceTree = "<group>"; };
 		E616C0A5EBD65651EBCDD88D /* Pods-LZCoderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZCoderTests.release.xcconfig"; path = "Target Support Files/Pods-LZCoderTests/Pods-LZCoderTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				1E1587DA222FDEA20054E751 /* DetailViewCell.swift */,
 				B83B0F2A2354EB9200FC1003 /* CartTableViewCell.swift */,
 				B830C4AE222EEE8F00871DCC /* ICDTableViewCell.swift */,
+				B8BF5F1023578AF600A1340C /* ProjectListTableViewCell.swift */,
 				8856845B222DF9EA00669E5A /* Main.storyboard */,
 				8856845E222DF9EB00669E5A /* Assets.xcassets */,
 				88568460222DF9EB00669E5A /* LaunchScreen.storyboard */,
@@ -476,6 +479,7 @@
 				B83B0F2B2354EB9200FC1003 /* CartTableViewCell.swift in Sources */,
 				B800F343230F07A300A53C07 /* ProfileViewController.swift in Sources */,
 				B830C4AF222EEE8F00871DCC /* ICDTableViewCell.swift in Sources */,
+				B8BF5F1123578AF600A1340C /* ProjectListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
