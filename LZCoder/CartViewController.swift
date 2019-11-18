@@ -34,6 +34,10 @@ class CartViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnBackClicked(_ sender: UIButton) {
+        self.tabBarController?.selectedIndex = 0
+    }
+    
     @IBAction func btnFacilityClick(_ sender: Any) {
         if self.btnFacility.isSelected {
             self.btnFacility.isSelected = false
