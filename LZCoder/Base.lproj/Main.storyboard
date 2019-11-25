@@ -369,7 +369,7 @@
                                                 <state key="normal" title="Edit Photo"/>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BwB-zV-nA4" customClass="LZFloatingLabelTextField" customModule="LZCoder" customModuleProvider="target">
-                                                <rect key="frame" x="51.666666666666657" y="240" width="310.66666666666674" height="39"/>
+                                                <rect key="frame" x="51.666666666666657" y="240.00000000000003" width="310.66666666666674" height="39.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -401,7 +401,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CV7-B5-i2G" customClass="LZFloatingLabelTextField" customModule="LZCoder" customModuleProvider="target">
-                                                <rect key="frame" x="51.666666666666657" y="294" width="310.66666666666674" height="39.666666666666686"/>
+                                                <rect key="frame" x="51.666666666666657" y="294.33333333333331" width="310.66666666666674" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 <userDefinedRuntimeAttributes>
@@ -412,7 +412,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qg9-bN-iM7" customClass="LZFloatingLabelTextField" customModule="LZCoder" customModuleProvider="target">
-                                                <rect key="frame" x="51.666666666666657" y="348.66666666666669" width="310.66666666666674" height="39"/>
+                                                <rect key="frame" x="51.666666666666657" y="348.33333333333331" width="310.66666666666674" height="39.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
@@ -536,7 +536,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="69G-ss-lwH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="SsY-B1-XtA"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-nav-icon" selectedImage="profile-nav-icon" id="SsY-B1-XtA"/>
                     <connections>
                         <outlet property="btnFemale" destination="AxV-xQ-LXr" id="hRN-7q-Pff"/>
                         <outlet property="btnMale" destination="PwQ-xw-gUE" id="5g4-w7-Ofo"/>
