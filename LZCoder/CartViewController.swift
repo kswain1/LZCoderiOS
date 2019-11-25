@@ -19,6 +19,12 @@ class CartViewController: UIViewController {
     var icdCartData : [[String:Any]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         cptCartData = UserDefaults.standard.array(forKey: "CPTCart") as? [[String : Any]] ?? []
         icdCartData = UserDefaults.standard.array(forKey: "ICDCart") as? [[String : Any]] ?? []
         print(cptCartData)
@@ -31,7 +37,8 @@ class CartViewController: UIViewController {
             total = total + priceDouble!
         }
         self.lblPriceTotal.text = String(format:"$%.2f", total)
-        // Do any additional setup after loading the view.
+        self.tblCartList.reloadData()
+        self.tblProductList.reloadData()
     }
     
     @IBAction func btnBackClicked(_ sender: UIButton) {
