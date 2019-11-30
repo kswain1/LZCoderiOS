@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1027755765332-l93noh7rid8jk1t0ou7ne83ra5v7a60c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1027755765332-l93noh7rid8jk1t0ou7ne83ra5v7a60c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBr6mMIcsdXqYKyIWby_Vvd13gKuZjbkZo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1027755765332</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.zc.LZCoder</string>
+	<key>PROJECT_ID</key>
+	<string>lzcoder</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lzcoder.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1027755765332:ios:ebbce34765ec5ae143c7c1</string>
+	<key>DATABASE_URL</key>
+	<string>https://lzcoder.firebaseio.com</string>
+</dict>
+</plist>

@@ -25,6 +25,10 @@
 		B800F351230F0DF800A53C07 /* LZFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800F350230F0DF800A53C07 /* LZFloatingLabelTextField.swift */; };
 		B830C4AD222EEE7700871DCC /* CPTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830C4AC222EEE7700871DCC /* CPTTableViewCell.swift */; };
 		B830C4AF222EEE8F00871DCC /* ICDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830C4AE222EEE8F00871DCC /* ICDTableViewCell.swift */; };
+		B8328B8423923E5F00C9BA28 /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8328B8323923E5F00C9BA28 /* StartUpViewController.swift */; };
+		B8328B8623923E7300C9BA28 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8328B8523923E7300C9BA28 /* SignInViewController.swift */; };
+		B8328B8823923E8100C9BA28 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8328B8723923E8100C9BA28 /* SignUpViewController.swift */; };
+		B8328B8A23923F1E00C9BA28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8328B8923923F1E00C9BA28 /* GoogleService-Info.plist */; };
 		B83B0F292354E92500FC1003 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B0F282354E92500FC1003 /* CartViewController.swift */; };
 		B83B0F2B2354EB9200FC1003 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B0F2A2354EB9200FC1003 /* CartTableViewCell.swift */; };
 		B848D7FB222E278D00F71BB2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848D7FA222E278D00F71BB2 /* SearchViewController.swift */; };
@@ -82,6 +86,10 @@
 		B800F350230F0DF800A53C07 /* LZFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		B830C4AC222EEE7700871DCC /* CPTTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTTableViewCell.swift; sourceTree = "<group>"; };
 		B830C4AE222EEE8F00871DCC /* ICDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICDTableViewCell.swift; sourceTree = "<group>"; };
+		B8328B8323923E5F00C9BA28 /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
+		B8328B8523923E7300C9BA28 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B8328B8723923E8100C9BA28 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B8328B8923923F1E00C9BA28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B83B0F282354E92500FC1003 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		B83B0F2A2354EB9200FC1003 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		B848D7FA222E278D00F71BB2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 		88568456222DF9EA00669E5A /* LZCoder */ = {
 			isa = PBXGroup;
 			children = (
+				B8328B8223923E4D00C9BA28 /* SignInUp */,
 				B84D30182323DFAD008F36FD /* Network */,
 				B800F346230F0D2E00A53C07 /* SubClasses */,
 				88568457222DF9EA00669E5A /* AppDelegate.swift */,
@@ -178,6 +187,7 @@
 				8856845E222DF9EB00669E5A /* Assets.xcassets */,
 				88568460222DF9EB00669E5A /* LaunchScreen.storyboard */,
 				88568463222DF9EB00669E5A /* Info.plist */,
+				B8328B8923923F1E00C9BA28 /* GoogleService-Info.plist */,
 				B84D301623237E4A008F36FD /* 47570.json */,
 				B8D78FF82322178000F1E623 /* 35351.json */,
 				B8D78FF92322178000F1E623 /* apiSinglePhrase.json */,
@@ -221,6 +231,16 @@
 			path = BorderedTextField;
 			sourceTree = "<group>";
 		};
+		B8328B8223923E4D00C9BA28 /* SignInUp */ = {
+			isa = PBXGroup;
+			children = (
+				B8328B8323923E5F00C9BA28 /* StartUpViewController.swift */,
+				B8328B8523923E7300C9BA28 /* SignInViewController.swift */,
+				B8328B8723923E8100C9BA28 /* SignUpViewController.swift */,
+			);
+			path = SignInUp;
+			sourceTree = "<group>";
+		};
 		B84D30182323DFAD008F36FD /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +272,7 @@
 				88568451222DF9EA00669E5A /* Frameworks */,
 				88568452222DF9EA00669E5A /* Resources */,
 				C7EF2FF073B9ED03216D8E46 /* [CP] Embed Pods Frameworks */,
+				747C7E5A83679052E2125CFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -354,6 +375,7 @@
 				B84D301723237E4A008F36FD /* 47570.json in Resources */,
 				8856845D222DF9EA00669E5A /* Main.storyboard in Resources */,
 				B8D78FFA2322178100F1E623 /* 35351.json in Resources */,
+				B8328B8A23923F1E00C9BA28 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +440,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		747C7E5A83679052E2125CFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LZCoder/Pods-LZCoder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LZCoder/Pods-LZCoder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LZCoder/Pods-LZCoder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7F28046E455E30CB0786C7A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,12 +510,15 @@
 				8856845A222DF9EA00669E5A /* ViewController.swift in Sources */,
 				B800F34B230F0D6C00A53C07 /* UIView+Border.swift in Sources */,
 				1E1587DB222FDEA20054E751 /* DetailViewCell.swift in Sources */,
+				B8328B8823923E8100C9BA28 /* SignUpViewController.swift in Sources */,
 				B84D301C2323E1A8008F36FD /* BaseNetworking.swift in Sources */,
 				88568458222DF9EA00669E5A /* AppDelegate.swift in Sources */,
 				1E1587D9222FD3D80054E751 /* CPTDetailViewController.swift in Sources */,
 				B830C4AD222EEE7700871DCC /* CPTTableViewCell.swift in Sources */,
 				B84D301A2323DFD2008F36FD /* CodeNetwork.swift in Sources */,
 				B83B0F2B2354EB9200FC1003 /* CartTableViewCell.swift in Sources */,
+				B8328B8423923E5F00C9BA28 /* StartUpViewController.swift in Sources */,
+				B8328B8623923E7300C9BA28 /* SignInViewController.swift in Sources */,
 				B800F343230F07A300A53C07 /* ProfileViewController.swift in Sources */,
 				B830C4AF222EEE8F00871DCC /* ICDTableViewCell.swift in Sources */,
 				B8BF5F1123578AF600A1340C /* ProjectListTableViewCell.swift in Sources */,

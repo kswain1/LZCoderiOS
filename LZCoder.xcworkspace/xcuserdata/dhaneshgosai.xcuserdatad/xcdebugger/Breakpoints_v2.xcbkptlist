@@ -7,6 +7,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "50246E17-7D7B-4ECD-BADC-5BB55204C02A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -20,6 +21,7 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "50246E17-7D7B-4ECD-BADC-5BB55204C02A - 6fd7c2104c42b616"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -27,14 +29,14 @@
                   moduleName = "LZCoder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/Dhanesh%20Data/Projects/OtherProjects/Kehlin/LZCoder/LZCoder_Git/LZCoderiOS/LZCoder/SearchViewController.swift"
-                  timestampString = "596395312.0672539"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "151"
                   endingLineNumber = "151"
-                  offsetFromSymbolStart = "183">
+                  offsetFromSymbolStart = "181">
                </Location>
                <Location
+                  uuid = "50246E17-7D7B-4ECD-BADC-5BB55204C02A - 6fd7c2104c42b616"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -42,12 +44,11 @@
                   moduleName = "LZCoder"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/Dhanesh%20Data/Projects/OtherProjects/Kehlin/LZCoder/LZCoder_Git/LZCoderiOS/LZCoder/SearchViewController.swift"
-                  timestampString = "596395312.068925"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "151"
                   endingLineNumber = "151"
-                  offsetFromSymbolStart = "2602">
+                  offsetFromSymbolStart = "2544">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -55,6 +56,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "41FC95E6-72E5-494C-82B4-7A00E74C3790"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -65,6 +67,54 @@
             startingLineNumber = "44"
             endingLineNumber = "44"
             landmarkName = "btnAddToCartClick(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3CF9361-ACAF-4945-841B-DD02650388DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LZCoder/SignInUp/StartUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64516B41-C15F-47C7-A9C0-9277C3033314"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LZCoder/SignInUp/StartUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "goToHomeScreen()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E7C3C02-D385-4FE5-9325-05542FFE3914"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LZCoder/SignInUp/StartUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "signIn()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
