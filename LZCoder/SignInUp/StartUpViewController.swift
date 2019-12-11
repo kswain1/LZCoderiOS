@@ -98,16 +98,18 @@ extension StartUpViewController: FUIAuthDelegate {
         let loginViewController = FUIAuthPickerViewController(authUI: authUI)
         
         //loginViewController.view.backgroundColor = UIColor.black
-        
-        let logoFrame = CGRect(x: 0, y: 0, width: loginViewController.view.frame.size.width, height: loginViewController.view.frame.size.height)
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let logoFrame = CGRect(x: 0, y: 0, width: (appDelegate?.window?.frame.size.width)!, height: (appDelegate?.window?.frame.size.height)! - 44)
         let logoImageView = UIImageView(frame: logoFrame)
         logoImageView.image = UIImage(named: "Splash Page")
+        logoImageView.contentMode = .scaleToFill
+
         
        
         //fix this once Firebase UI releases the dark mode support for sign-in
         
-        loginViewController.view.subviews[0].backgroundColor = .black
-        loginViewController.view.subviews[0].subviews[0].backgroundColor = .black
+        loginViewController.view.subviews[0].backgroundColor = .clear
+        loginViewController.view.subviews[0].subviews[0].backgroundColor = .clear
         
         loginViewController.view.addSubview(logoImageView)
         loginViewController.view.sendSubviewToBack(logoImageView)
